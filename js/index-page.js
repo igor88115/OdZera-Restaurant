@@ -57,7 +57,7 @@ async function generateOffersContent() {
     const newOffer = document.createElement('div');
     newOffer.classList.add('offer-item');
     const day = offer.day;
-    newOffer.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/offers/${day}.png')`;
+    newOffer.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/offers/${day}.png')`;
     newOffer.innerHTML = `<strong>${day}&nbsp;</strong>${offer.text}`;
     offersContainer.appendChild(newOffer);
   })
