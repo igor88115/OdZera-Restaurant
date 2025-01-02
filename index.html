@@ -1,0 +1,131 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <script src="js/app.js"></script>
+  <script src="js/index-page.js"></script>
+  <script>
+    function toggleButtonText() {
+      const button = document.getElementById('phone-link');
+      if (button.innerText === "zamówić telefonicznie") {
+        button.innerText = "+48-792-938-818";
+      } else {
+        button.innerText = "zamówić telefonicznie";
+      }
+    }
+
+    function toggleMenu() {
+      const fullscreenMenu = document.getElementById('fullscreenMenu');
+
+      if (fullscreenMenu.style.display === 'flex') {
+        fullscreenMenu.style.display = 'none';
+      } else {
+        fullscreenMenu.style.display = 'flex';
+      }
+    }
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Od Zera</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Italianno&family=League+Spartan&display=swap" rel="stylesheet">
+
+
+  <meta name=" description" content="OD ZERA - Trattoria in Gdańsk">
+
+  <meta property="og:title" content="OD ZERA - Trattoria in Gdańsk">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:alt" content="OD ZERA - Trattoria in Gdańsk">
+
+  <link rel="icon" href="/favicon-logo-transparent.png" sizes="any">
+  <link rel="icon" href="/favicon-logo-transparent.png" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon-logo-transparent.png">
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<div class="background-container">
+  <div id="header-container"></div>
+  <div class="main-info-container">
+    <h1 class="main-info-name">OD ZERA</h1>
+    <h2 class="main-info-descr">trattoria w Gdańsku</h2>
+    <a href="menu.html" class="main-info-menu-button">przejdź do menu</a>
+  </div>
+</div>
+<body style="margin: 0">
+<div id="o-nas" class="history-block-container">
+  <img id="history-image-1" class="history-item" src="img/history/1.png"/>
+  <div id="history-text-1" class="history-item history-text"></div>
+  <img id="history-image-2" class="history-item history-image" src="img/history/2.png"/>
+</div>
+<img id="history-image-supplementary" class="history-item-supplementary" src="img/history/5.png"/>
+<div class="history-block-container">
+  <img id="history-image-3" class="history-item" src="img/history/3.png"/>
+  <div id="history-text-2" class="history-item history-text"></div>
+  <img id="history-image-4" class="history-item history-image" src="img/history/4.png"/>
+</div>
+<div class="go-to-menu-background">
+  <a href="menu.html" class="main-info-menu-button">przejdź do menu</a>
+</div>
+<div id="offers" class="offers-container">
+  <h3 class="offers-text">PROMOCJE</h3>
+  <div id="offers-info-container" class="offers-info-container"></div>
+</div>
+
+<div class="phone-us-background">
+  <button href="tel:+48792938818" class="main-info-menu-button" onclick="toggleButtonText()">
+    <a class="no-underline phone-us-text" id="phone-link" id href="tel:+48792938818">zamówić telefonicznie</a>
+  </button>
+</div>
+
+<div id="contacts" class="contacts-grid-container">
+  <div class="contacts-grid-item">
+    <h3 class="contacts-item-header">godziny otwarcia</h3>
+    <div class="schedule-grid">
+      <h4 class="contacts-item-schedule-text">pn-czw</h4>
+      <h4 class="contacts-item-schedule-text">13:00-22:00</h4>
+      <h4 class="contacts-item-schedule-text">pt-sob</h4>
+      <h4 class="contacts-item-schedule-text">13:00-23:00</h4>
+      <h4 class="contacts-item-schedule-text">ndz</h4>
+      <h4 class="contacts-item-schedule-text">12:00-22:00</h4>
+    </div>
+  </div>
+  <div class="contacts-grid-item">
+    <h3 class="contacts-item-header">TELEFON</h3>
+    <a href="tel:+48792938818" class="contacts-item-text no-underline">+48-792-938-818</a>
+  </div>
+  <div class="contacts-grid-item">
+    <h3 class="contacts-item-header">ADRES</h3>
+    <a href="https://maps.app.goo.gl/Lj7JgsGBapgWPFWG7" class="contacts-item-text">ul. Świętokrzyska 21/5 Gdańsk
+      80-180</a>
+  </div>
+  <div class="contacts-grid-item">
+    <h3 class="contacts-item-header">Śledź aktualizacje</h3>
+    <div>
+      <a href="https://www.facebook.com/profile.php?id=61558701865871" class="no-underline">
+        <div class="social-item">
+          <img class="social-icon" src="img/icons/socials/facebook-icon.svg"/>
+          <h4 class="contacts-item-text">Od.Zera</h4>
+        </div>
+      </a>
+      <a href="https://www.instagram.com/t.odzera" class="no-underline">
+        <div class="social-item">
+          <img class="social-icon" src="img/icons/socials/instagram-icon.svg"/>
+          <h4 class="contacts-item-text">Od.Zera</h4>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+</body>
+
+<div id="application-menu-container"></div>
+
+<div id="footer-container"></div>
+</html>

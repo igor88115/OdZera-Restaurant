@@ -1,0 +1,867 @@
+/*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+@font-face {
+  font-family: 'Lao Mn';
+  src: url('fonts/lao-mn.ttf') format('truetype');
+}
+
+html {
+  color: #222;
+  /*font-size: 1em;*/
+  font-size: clamp(10px, 3vw, 18px); /* Minimum size of 14px, maximum size of 18px, and scales with viewport width */
+  line-height: 1.4;
+  scroll-behavior: smooth;
+}
+
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .visually-hidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * The use of `table` rather than `block` is only necessary if using
+ * `::before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
+.league-spartan-header {
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  /*font-size: 24px;*/
+  font-size: 1.5rem;
+  color: white;
+}
+
+.league-spartan-header-semi-bold {
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  /*font-size: 24px;*/
+  font-size: 1.5rem;
+  font-style: normal;
+  color: white;
+}
+
+.main-info-name {
+  font-family: 'Lao Mn', sans-serif;
+  font-weight: normal;
+  /*font-size: 150px;*/
+  font-size: 8rem;
+  color: white;
+  margin: 0;
+}
+
+.main-info-descr {
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  /*font-size: 24px;*/
+  font-size: 1.5rem;
+  font-style: normal;
+  color: white;
+  margin: 0;
+}
+
+.sticky-header {
+  position: sticky;
+  top: 0;
+}
+
+.flex-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  padding-left: 17%;
+  padding-right: 10%;
+  max-height: 160px;
+}
+
+/* Flex container */
+.header-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+}
+
+.header-logo {
+  max-width: 100px;
+  max-height: 50px;
+}
+
+.header-item {
+  display: flex;
+  padding: 40px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.header-item:hover {
+  color: #8F7777;
+}
+
+.background-container {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 85vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/img/mainPicture.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.main-info-container {
+  margin-top: 10%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 20%;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.main-info-menu-button {
+  background-color: #301E1C;
+  color: white;
+  border: none;
+  border-radius: 35px;
+  padding: 10px 20px;
+  cursor: pointer;
+  opacity: 1;
+  transition: background-color 0.3s, transform 0.1s ease;
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  /*font-size: 32px;*/
+  font-size: 2rem;
+  font-style: normal;
+  /*padding-right: 10%;*/
+  /*padding-left: 10%;*/
+  /*padding-bottom: 2%;*/
+  /*padding-top: 2%;*/
+  padding-right: 5rem;
+  padding-left: 5rem;
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+  margin-top: 20px;
+  text-decoration: none;
+}
+
+
+.main-info-menu-button:hover,
+.main-info-menu-button:active {
+  background-color: #8F7777;
+  transform: scale(0.98);
+}
+
+
+.history-block-container {
+    margin: 2rem;
+    display: flex;
+    flex-direction: row;
+  justify-content: space-around;
+   align-items: center;
+    max-height: 100%;
+}
+
+.history-text {
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+.history-text-paragraph {
+  font-family: "League Spartan", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  color: black;
+}
+
+.history-text-header {
+  font-family: 'Lao Mn', sans-serif;
+  font-weight: 400;
+  /*font-size: 24px;*/
+  font-size: 2rem;
+  color: black;
+  margin-bottom: 2rem;
+}
+
+.history-text-end-note {
+  margin-top: 2rem;
+  font-family: "Italianno", cursive;
+  font-weight: 400;
+  font-style: normal;
+  /*font-size: 30px;*/
+  font-size: 2.3rem;
+}
+
+.history-item-supplementary {
+  display: none;
+}
+
+@media (max-width: 1700px) {
+  #history-image-2, #history-image-4 {
+    display: none;
+  }
+  .history-text {
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+}
+
+@media (max-width: 1050px) {
+  #history-image-1, #history-image-3 {
+    display: none;
+  }
+  #history-image-supplementary {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/img/history/5.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    max-width: 100%;
+    height: 512px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  .history-text {
+    margin-right: 1%;
+    margin-left: 1%;
+  }
+  .history-text-paragraph {
+    font-family: "League Spartan", sans-serif;
+    font-weight: 300;
+    font-size: 1.5rem;
+    color: black;
+  }
+}
+
+.go-to-menu-background {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/goToMenu.png');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  max-width: 100%;
+  height: 512px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.offers-text {
+  font-family: 'Lao Mn', sans-serif;
+  font-weight: 400;
+  /*font-size: 64px;*/
+  font-size: 4rem;
+  color: black;
+  margin: 2rem;
+}
+
+.offers-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 100%;
+  text-align: center;
+}
+
+.offers-info-container {
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  /*font-size: 24px;*/
+  font-size: 1.5rem;
+  font-style: normal;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.offer-item {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  max-width: 100%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  box-sizing: border-box;
+  padding-left: 35%;
+  margin: 0 auto;
+  /*font-size: 40px;*/
+
+  font-size: 2.3rem;
+}
+
+
+@media (max-width: 1199px) {
+  .offers-info-container {
+    width: 100%;
+  }
+  .offer-item {
+    padding-left: 10%;
+    font-size: 2rem;
+  }
+}
+
+.phone-us-background{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/img/phoneImage.png');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  max-width: 100%;
+  height: 512px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.phone-us-text {
+  color: white;
+  cursor: pointer;
+  opacity: 1;
+  transition: background-color 0.3s, transform 0.1s ease;
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  /*font-size: 32px;*/
+  font-size: 2rem;
+  font-style: normal;
+}
+
+.contacts-grid-container{
+  display: grid;
+  align-self: center;
+  grid-template-columns: 1fr 1fr;
+  gap: 10%;
+  margin: 5% 10%;
+  margin-bottom: 100px;
+}
+
+.contacts-grid-item {
+  width: 100%;
+}
+
+.contacts-item-header{
+  text-transform: uppercase;
+  font-family: 'Lao Mn', sans-serif;
+  font-weight: normal;
+  /*font-size: 40px;*/
+  font-size: 2.5rem;
+  ont-optical-sizing: auto;
+  color: black;
+  margin: 0;
+}
+
+.contacts-item-text{
+  text-decoration: none;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  /*font-size: 32px;*/
+  font-size: 1.7rem;
+  color: black;
+  margin: 0;
+}
+.schedule-grid {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  max-width: 400px;
+}
+.contacts-item-schedule-text{
+  font-family: "League Spartan", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  /*font-size: 32px;*/
+  font-size: 2rem;
+  color: black;
+  line-height: 0;
+}
+
+.social-item {
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+}
+
+.social-icon {
+  width: 40px;
+  height: 42px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 1280px) {
+  .contacts-grid-container {
+    /*margin: 0;*/
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(1, 4fr);
+    gap: 5%;
+    margin-bottom: 120px;
+  }
+  .contacts-grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 512px;
+  }
+  .schedule-grid{
+    align-items: center;
+  }
+}
+
+.footer-container {
+  display: flex;
+  height: 150px;
+  background: #301E1C;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 17%;
+  padding-right: 17%;
+}
+.footer-logo{
+  width: 40px;
+  height: 90px;
+  padding-bottom: 2rem;
+}
+
+
+.footer-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+  /*gap: 20%;*/
+  /*max-width: 80%;*/
+}
+
+
+.footer-item {
+  display: flex;
+  padding: 40px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+
+.footer-item:hover {
+  color: #8F7777;
+}
+
+
+@media (max-width: 1825px) {
+  .flex-header {
+    padding-left: 5%;
+    padding-right: 0%;
+  }
+  .header-buttons, .footer-buttons {
+    padding: 0 0;
+  }
+  .footer-container {
+    padding-left: 5%;
+    padding-right: 0%;
+  }
+}
+
+.hamburger-menu{
+  padding: 1rem;
+  display: none;
+}
+
+@media (max-width: 970px) {
+  .hamburger-menu{
+    display: block;
+  }
+  .header-buttons, .footer-buttons, #header-item-phone, #footer-item-phone {
+    display: none;
+  }
+
+  .main-info-name {
+    font-size: 6rem;
+  }
+}
+
+.hamburger-menu{
+  cursor: pointer;
+}
+
+.fullscreen-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: none;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 99;
+  text-align: center;
+}
+
+.close-btn{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.fullscreen-menu-nav-container {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+
+ul.fullscreen-menu-nav-container li:hover {
+  cursor: pointer;
+  background-color: #EEEAE8;
+}
+
+.fullscreen-menu-item{
+  margin: 10px 0;
+  width: 100%;
+  text-align: center;
+  width: 100%;
+}
+
+.fullscreen-menu-item a {
+  display: block;
+  padding: 20px 0;
+  color: black;
+  font-size: 20px;
+  text-decoration: none;
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  padding-left: 35%;
+  text-align: left;
+  /*font-size: 32px;*/
+  font-size: 2rem;
+}
+
+.brown-background {
+  background: #301E1C;
+}
+
+.menu-image-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.menu-image{
+  width: 90%;
+  max-height: 100%;
+  height: auto;
+}
+
+.menu-image-mobile{
+  display: none;
+  width:  90%;
+  max-height: 100%;
+  height: auto;
+}
+
+@media (max-width: 1500px) {
+  .menu-image{
+    width: 98%;
+  }
+}
+
+
+@media (max-width: 1199px) {
+  .menu-image {
+    display: none;
+  }
+
+  .menu-image-mobile {
+    display: block;
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .menu-image {
+    display: block;
+  }
+
+  .menu-image-mobile {
+    display: none;
+  }
+}
+
