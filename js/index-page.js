@@ -1,6 +1,6 @@
 async function generateHistoryContent() {
 
-  const response = await fetch('../data/history.json');
+  const response = await fetch('/data/history.json');
   const historyInfo = await response.json();
 
   const container = document.getElementById('history-text-1');
@@ -48,7 +48,7 @@ async function generateHistoryContent() {
 
 async function generateOffersContent() {
 
-  const response = await fetch('../data/offers.json');
+  const response = await fetch('data/offers.json');
   const offers = await response.json();
 
   const offersContainer = document.getElementById('offers-info-container');
