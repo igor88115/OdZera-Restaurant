@@ -361,6 +361,12 @@ textarea {
   max-height: 100%;
 }
 
+@media (max-width: 750px) {
+  .main-info-container {
+    margin-top: 40%;
+  }
+}
+
 .main-info-menu-button {
   background-color: #301E1C;
   color: white;
@@ -448,23 +454,37 @@ textarea {
     margin-left: 5%;
   }
 }
-
+.history-image-container{
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;
+}
 @media (max-width: 1050px) {
   #history-image-1, #history-image-3 {
     display: none;
   }
   #history-image-supplementary {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/history/5.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/history/5.jpg');
     background-size: cover;
     background-position: center;
-    width: 100%;
     max-width: 100%;
-    height: 512px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     box-sizing: border-box;
+  }
+
+  #history-image-supplementary-2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/history/6.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    max-width: 80%;
+    /*height: 170px;*/
+    box-sizing: border-box;
+    margin-top: 5%;
+    margin-bottom: 10%;
   }
   .history-text {
     margin-right: 1%;
@@ -490,6 +510,27 @@ textarea {
   align-items: center;
   text-align: center;
   box-sizing: border-box;
+}
+
+.phone-us-background{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/phoneImage.png');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  max-width: 100%;
+  height: 512px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1050px) {
+  .go-to-menu-background,
+  .phone-us-background{
+    height: 170px;
+  }
 }
 
 .offers-text {
@@ -538,8 +579,6 @@ textarea {
   box-sizing: border-box;
   padding-left: 35%;
   margin: 0 auto;
-  /*font-size: 40px;*/
-
   font-size: 2.3rem;
 }
 
@@ -551,21 +590,8 @@ textarea {
   .offer-item {
     padding-left: 10%;
     font-size: 2rem;
+    height: 150px;
   }
-}
-
-.phone-us-background{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/phoneImage.png');
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  max-width: 100%;
-  height: 512px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  box-sizing: border-box;
 }
 
 .phone-us-text {
@@ -586,8 +612,12 @@ textarea {
   align-self: center;
   grid-template-columns: 1fr 1fr;
   gap: 10%;
-  margin: 5% 10%;
-  margin-bottom: 100px;
+  margin: 5% 10% 100px;
+}
+
+
+.contacts-grid-container > *:nth-last-child(1) {
+  margin-top: -62px;
 }
 
 .contacts-grid-item {
@@ -628,6 +658,8 @@ textarea {
   font-size: 2rem;
   color: black;
   line-height: 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .social-item {
@@ -637,8 +669,8 @@ textarea {
 }
 
 .social-icon {
-  width: 40px;
-  height: 42px;
+  width: 3rem;
+  height: 40px;
   margin-right: 10px;
   margin-bottom: 10px;
 }
@@ -651,6 +683,9 @@ textarea {
     grid-template-columns: repeat(1, 4fr);
     gap: 5%;
     margin-bottom: 120px;
+  }
+  .contacts-grid-container > *:nth-last-child(1) {
+    margin-top: auto; /* or you can use margin-top: 0; to reset it */
   }
   .contacts-grid-item {
     display: flex;
